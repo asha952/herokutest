@@ -4,7 +4,6 @@ from unittest import TestCase, main as unittest_main, mock
 from bson.objectid import ObjectId
 from app import app
 
-
 sample_playlist_id = ObjectId('5d55cffc4a3d4031f42827a3')
 sample_playlist = {
     'title': 'Cat Videos',
@@ -26,9 +25,9 @@ sample_form_data = {
 class PlaylistsTests(TestCase):
     """Flask tests."""
 
-    def setUp(self): #set up
-        self.client = app.test_client() #Get the Flask test client
-        app.config['TESTING'] = True # Show Flask errors that happen during tests
+    def setUp(self):  # set up
+        self.client = app.test_client()  # Get the Flask test client
+        app.config['TESTING'] = True  # Show Flask errors that happen during tests
 
     def test_index(self):
         """Test the playlists homepage."""
